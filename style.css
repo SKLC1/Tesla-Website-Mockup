@@ -5,8 +5,9 @@
   box-sizing: border-box;
   color: #fff;
   font-family: Gotham;
-  
+  scroll-behavior: smooth;
 }
+
 body{
   height: 200vh;
 }
@@ -18,6 +19,7 @@ body{
   height: 100vh;
   width: 100%;
 }
+
 /* utility */
 @font-face {
   font-family: Gotham ;
@@ -34,6 +36,8 @@ body{
   justify-content: space-between;
   font-size: 13px;
   padding: 10px 40px;
+  animation-name: appear;
+  animation: appear 0.5s linear;
 }
 /* navbar */
 .nav-item{
@@ -44,6 +48,7 @@ body{
 
 .logo-icon{
   width: 120px;
+
 }
 .model-name{
   font-size: 42px;
@@ -66,6 +71,7 @@ body{
 
 .specs-container{
   margin-top: 50vh;
+  
 }
 .specs-list{
   display: flex;
@@ -73,6 +79,8 @@ body{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  animation-name: appear2;
+  animation: appear 0.5s linear;
 }
 .specs-item{
   list-style: none;
@@ -126,6 +134,36 @@ body{
 
   }
 }
+/* appear animation */
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opcity: 1;
+  }
+}
+@keyframes appear2{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opcity: 1;
+  }
+}
+.specs-item:nth-child(1){
+  animation-delay: 2s;
+}
+.specs-item:nth-child(2){
+  animation-delay: 4s;
+}
+.specs-item:nth-child(3){
+  animation-delay: 6s;
+}
+.specs-item:nth-child(4){
+  animation-delay: 8s;
+}
+
 
   /* media query */
 @media (max-width:970px) {
@@ -182,5 +220,108 @@ body{
 @media (max-height: 550px) {
   .specs-container{
     margin-top: 20vh;
+  }
+}
+@media (max-height: 350px) {
+  .specs-container{
+    top:200px;
+  }
+}
+
+/* main (sec-2) */
+.main-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+/* car content */
+.car-content{
+  /* background-color: red; */
+  height: 100vh;
+  width: auto;
+  
+}
+#car-image{
+  background: url('/model-3-hero-a-desktop.jpg') no-repeat center center/cover;
+  width: auto;
+  height: auto;
+  
+}
+/* aside */
+.aside-content{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 20%;
+  animation-name: appear;
+  animation: appear 0.5s linear;
+}
+.aside-list{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.aside-item{
+  color: #000;
+  font-family: Gotham-Light;
+  margin: 0.2rem;
+}
+#aside-bold{
+  font-size: 1.5rem;
+  font-family: Gotham;
+  font-weight: bolder;
+  margin-bottom: 4%;
+}
+#aside-grower{
+  height: 50vh;
+}
+.btn-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.btn-item{
+ color: #000;
+ list-style: none;
+}
+/* dark order button */
+.order-now-button__dark{
+  font-size: 12px;
+  border:solid #000 3px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  transition-duration: 0.5s;
+}
+.order-now-button__dark:hover{
+  background-color: #000;
+  color: #fff;
+}
+#plus{
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+
+/* main media query */
+
+@media (max-width: 1000px) {
+  .main-container{
+    flex-direction: column;
+  }
+  .aside-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .aside-content{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
+  #aside-grower{
+    height: 5vh;
   }
 }
