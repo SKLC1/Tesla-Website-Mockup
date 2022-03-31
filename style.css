@@ -61,15 +61,16 @@
 .specs-list{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 .specs-item{
   list-style: none;
   font-size: 25px;
-  
   font-weight: bolder;
   padding: 10px;
+  margin: 0 30px;
 }
 .specs-item__sub{
   font-size: 10px;
