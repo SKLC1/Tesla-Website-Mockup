@@ -5,7 +5,7 @@
   box-sizing: border-box;
   color: #fff;
   font-family: Gotham;
-  font-weight: bolder;
+  
 }
 /* HEADER */
 .header{
@@ -17,7 +17,7 @@
 /* utility */
 @font-face {
   font-family: Gotham ;
-  src: url('/Gotham\ Bold.otf');
+  src: url('/Gotham\ Medium.otf');
 }
 .nav-container{
   display: flex;
@@ -39,6 +39,7 @@
   /* color: white; */
 }
 .model-name{
+  font-weight: 100;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +72,6 @@
 .specs-item{
   list-style: none;
   font-size: 25px;
-  font-weight: bolder;
   padding: 10px;
   margin: 0 30px;
 }
