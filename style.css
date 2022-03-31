@@ -17,7 +17,7 @@
 /* utility */
 @font-face {
   font-family: Gotham ;
-  src: url('Gotham\ Thin.otf');
+  src: url('/Gotham\ Bold.otf');
 }
 .nav-container{
   display: flex;
@@ -44,19 +44,22 @@
   justify-content: center;
   margin-top: 100px;
 }
-@media (max-width:940px) {
+@media (max-width:970px) {
 .nav-item{
   display: none;
 }
-
 .logo{
   margin-top:18px ;
+}
+.order-now-button{
+  font-size: 10px;
+  padding: 10px 80px;
 }
 }
 /* specs bar */
 
 .specs-container{
-  margin-top: 600px;
+  margin-top: 400px;
 }
 .specs-list{
   display: flex;
@@ -79,5 +82,22 @@
   font-size: 12px;
   border:solid #fff 3px;
   border-radius: 20px;
-  padding: 10px 50px;
+  padding: 10px 60px;
+}
+  /* media query */
+  @media (max-width:700px) {
+    .order-now-button{
+      font-size: 10px;
+      padding: 10px 80px;
+    }
+}
+
+@media (max-width:480px) {
+  .specs-item{
+    font-size: 20px;
+    margin: 0 10px;
+  }
+  .order-now-button{
+    font-size: 10px;
+  }
 }
