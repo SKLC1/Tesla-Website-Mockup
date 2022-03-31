@@ -1,0 +1,82 @@
+/* reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: Gotham;
+  font-weight: bolder;
+}
+/* HEADER */
+.header{
+  background: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/d0cecbbf-1a20-4b48-b136-fb096af19515/bvlatuR/std/2880x1800/model-3-main-hero-a-desktop')
+  no-repeat center center/cover ;
+  height: 100vh;
+  width: 100%;
+}
+/* utility */
+@font-face {
+  font-family: Gotham ;
+  src: url('Gotham\ Thin.otf');
+}
+.nav-container{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
+  font-size: 13px;
+  
+  padding: 10px 40px;
+}
+/* navbar */
+.nav-item{
+  display: inline-block;
+  margin: 14px;
+}
+
+.logo-icon{
+  width: 120px;
+  /* color: white; */
+}
+.model-name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+@media (max-width:940px) {
+.nav-item{
+  display: none;
+}
+
+.logo{
+  margin-top:18px ;
+}
+}
+/* specs bar */
+
+.specs-container{
+  margin-top: 600px;
+}
+.specs-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.specs-item{
+  list-style: none;
+  font-size: 25px;
+  
+  font-weight: bolder;
+  padding: 10px;
+}
+.specs-item__sub{
+  font-size: 10px;
+}
+.order-now-button{
+  font-size: 12px;
+  border:solid #fff 3px;
+  border-radius: 20px;
+  padding: 10px 50px;
+}
