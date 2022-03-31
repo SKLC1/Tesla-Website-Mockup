@@ -7,6 +7,10 @@
   font-family: Gotham;
   
 }
+body{
+  height: 200vh;
+}
+
 /* HEADER */
 .header{
   background: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/d0cecbbf-1a20-4b48-b136-fb096af19515/bvlatuR/std/2880x1800/model-3-main-hero-a-desktop')
@@ -18,6 +22,10 @@
 @font-face {
   font-family: Gotham ;
   src: url('/Gotham\ Medium.otf');
+}
+@font-face {
+  font-family: Gotham-Light ;
+  src: url('/Gotham\ Thin.otf');
 }
 .nav-container{
   display: flex;
@@ -31,17 +39,19 @@
 .nav-item{
   display: inline-block;
   margin: 14px;
+  font-weight: 400;
 }
+
 .logo-icon{
   width: 120px;
-  /* color: white; */
 }
 .model-name{
+  font-size: 42px;
   font-weight: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 10%;
 }
 .hidden-menu{
   display: none;  
@@ -55,7 +65,7 @@
 /* specs bar */
 
 .specs-container{
-  margin-top: 400px;
+  margin-top: 50vh;
 }
 .specs-list{
   display: flex;
@@ -66,19 +76,57 @@
 }
 .specs-item{
   list-style: none;
-  font-size: 25px;
+  font-size: 30px;
   padding: 10px;
   margin: 0 30px;
 }
 .specs-item__sub{
-  font-size: 10px;
+  font-size: 12px;
+  font-family: Gotham-Light;
+  font-weight: bolder;
+  margin: 5px;
 }
 .order-now-button{
   font-size: 12px;
   border:solid #fff 3px;
   border-radius: 20px;
   padding: 10px 60px;
+  transition-duration: 0.5s;
 }
+.order-now-button:hover{
+  background-color: #fff;
+  color: #000;
+}
+  /* scroll down button */
+  .scroll-down-container{
+    display: flex;
+    align-items:baseline;
+    justify-content: center;
+    padding-bottom:20px ;
+    position: relative;
+  }
+  .scroll-down{
+  filter: invert(96%) sepia(9%) saturate(25%) hue-rotate(171deg) brightness(98%) contrast(91%); /* this is for coloring an svg*/
+  animation-name: scroll;
+  animation:scroll 3s ease-in-out infinite; 
+}
+/* scroll animation */
+@keyframes scroll {
+  10%{
+    transform: translateY(10px);
+  }
+  20%{
+    transform: translateY(0px);
+  }
+  30%{
+    transform: translateY(5px);
+  }
+  50%{
+    transform: translateY(0px);
+
+  }
+}
+
   /* media query */
 @media (max-width:970px) {
     .hidden-menu{
@@ -102,7 +150,7 @@
     }
 }
 
-@media (max-width:480px) {
+@media (max-width:490px) {
   .specs-item{
     font-size: 20px;
     margin: 0 10px;
@@ -118,6 +166,21 @@
     margin-top: 100px;
   }
   .specs-container{
-    margin-top: 600px;
+    margin-top: 580px;
+  }
+  .nav-container{
+    margin-left: 50px;
+    font-size: 14px;
+  }
+}
+/* height media querys */
+@media (max-height: 700px) {
+  .specs-container{
+    margin-top: 35vh;
+  }
+}
+@media (max-height: 550px) {
+  .specs-container{
+    margin-top: 20vh;
   }
 }
