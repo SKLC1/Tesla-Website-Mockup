@@ -102,6 +102,7 @@ body{
   border-radius: 20px;
   padding: 10px 60px;
   transition-duration: 0.5s;
+  white-space: nowrap;
 }
 .order-now-button:hover{
   background-color: #fff;
@@ -147,12 +148,12 @@ body{
 }
 @keyframes appear2{
   0%{
-    top: translateY(-50px);
+    transform: translateY(600px);
     opacity: 0;
   }
   100%{
     opacity: 1;
-    transform: translateY(0);
+    
   }
 }
 .specs-item:nth-child(1){
@@ -169,7 +170,21 @@ body{
 }
 
 
-  /* media query */
+  /* media query width*/
+
+  @media (min-width: 1750px) {
+    .model-name{
+      margin-top: 100px;
+    }
+    .specs-container{
+      margin-top: 580px;
+    }
+    .nav-container{
+      margin-left: 50px;
+      font-size: 14px;
+    }
+  }
+
 @media (max-width:970px) {
     .hidden-menu{
       display: inline;
@@ -204,18 +219,7 @@ body{
   }
 }
 
-@media (min-width: 1750px) {
-  .model-name{
-    margin-top: 100px;
-  }
-  .specs-container{
-    margin-top: 580px;
-  }
-  .nav-container{
-    margin-left: 50px;
-    font-size: 14px;
-  }
-}
+
 /* height media querys */
 @media (max-height: 650px) {
   .specs-container{
@@ -290,14 +294,20 @@ body{
 .btn-item{
  color: #000;
  list-style: none;
+ font-family: Gotham-Light;
+ font-weight: bolder;
+ font-size: 12px;
+ /* white-space: nowrap; */
 }
 /* dark order button */
 .order-now-button__dark{
   font-size: 12px;
   border:solid #000 3px;
   border-radius: 20px;
-  padding: 5px 10px;
+  padding: 10px 40px;
   transition-duration: 0.5s;
+  font-weight: bolder;
+  font-size: 12px;
 }
 .order-now-button__dark:hover{
   background-color: #000;
@@ -306,11 +316,23 @@ body{
 #plus{
   padding: 5px 10px;
   border-radius: 50px;
+  font-size: 15px;
+  font-family: Gotham;
 }
 
 /* main media query */
+@media (max-width: 1450px) {
+  #aside-grower{
+    height: 18rem;
+  }
+  .btn-item{
+    color: #000;
+    list-style: none;
+    padding: 5px 10px;
+   }
 
-@media (max-width: 1000px) {
+}
+@media (max-width: 1600px) {
   .main-container{
     flex-direction: column;
   }
@@ -326,16 +348,96 @@ body{
     height: 100vh;
     width: 100%;
   }
+  .btn-item{
+    color: #000;
+    list-style: none;
+    padding: 10px 50px;
+    /* margin: 0 20px; */
+   }
   #aside-grower{
-    height: 5vh;
+    height: 2rem;
   }
 }
+@media (max-width: 600px) {
+  .btn-item{
+    color: #000;
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+   }
+}
 /* footer */
+#divider{
+  height: 10px;
+  width: 100vw;
+}
 .page-3-image{
   background: url('/lhd-performance-hero-desktop.jpg') no-repeat center center/cover;
-  height: 100vh;
-  
+  height: 80vh;
+  z-index: -1;
 }
 #specs-container-2{
-  margin-top: 0;
+ margin: 0;
+ padding: 0;
+ position: relative;
+ 
+}
+.specs-list-2{
+  position: absolute;
+  bottom: 80px;
+  left: 25%;
+}
+.specs-item2{
+  text-align: center;
+}
+.description-container{
+  display: flex;
+  flex-direction: row;
+  margin: 0 20%;
+}
+.buttons-container{
+ display: flex;
+ flex-direction:column;
+ padding: 40px 10px;
+}
+.btn-item-2{
+ margin: 0 5px;
+}
+#btn-list-2{
+  justify-content: start;
+}
+/* title */
+.title-container{
+  padding: 10px;
+}
+.title{
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 100;
+  padding-right: 3rem;
+  white-space: nowrap;
+  margin-bottom: 1rem;
+}
+.title-sub{
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 100;
+  font-family: Gotham-Light;
+}
+.description{
+  color: #000;
+  font-family: Gotham-Light;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 2rem;
+  word-spacing: 5px;
+}
+/* footer media width */
+@media (max-width:1600px) {
+  .description-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20%;
+  }
+  
 }
