@@ -9,7 +9,7 @@
 }
 
 body{
-  height: 200vh;
+  height: 300vh;
 }
 
 /* HEADER */
@@ -70,7 +70,7 @@ body{
 /* specs bar */
 
 .specs-container{
-  margin-top: 50vh;
+  margin-top: 55vh;
   
 }
 .specs-list{
@@ -79,14 +79,16 @@ body{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  animation-name: appear2;
-  animation: appear 0.5s linear;
+  /* animation-name: appear2;
+  animation: appear 0.5s linear; */
 }
 .specs-item{
   list-style: none;
   font-size: 30px;
   padding: 10px;
   margin: 0 30px;
+  animation-name: appear2;
+  animation: appear 0.5s ease-out 1;
 }
 .specs-item__sub{
   font-size: 12px;
@@ -140,28 +142,30 @@ body{
     opacity: 0;
   }
   100%{
-    opcity: 1;
+    opacity: 1;
   }
 }
 @keyframes appear2{
   0%{
+    top: translateY(-50px);
     opacity: 0;
   }
   100%{
-    opcity: 1;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .specs-item:nth-child(1){
-  animation-delay: 2s;
+  animation-delay: 0.2s;
 }
 .specs-item:nth-child(2){
-  animation-delay: 4s;
+  animation-delay: 0.4s;
 }
 .specs-item:nth-child(3){
-  animation-delay: 6s;
+  animation-delay: 0.6s;
 }
 .specs-item:nth-child(4){
-  animation-delay: 8s;
+  animation-delay: 0.8s;
 }
 
 
@@ -191,7 +195,8 @@ body{
 @media (max-width:490px) {
   .specs-item{
     font-size: 20px;
-    margin: 0 10px;
+    margin: 0 0px;
+    padding: 0;
   }
   .order-now-button{
     font-size: 10px;
@@ -212,7 +217,7 @@ body{
   }
 }
 /* height media querys */
-@media (max-height: 700px) {
+@media (max-height: 650px) {
   .specs-container{
     margin-top: 35vh;
   }
@@ -324,4 +329,13 @@ body{
   #aside-grower{
     height: 5vh;
   }
+}
+/* footer */
+.page-3-image{
+  background: url('/lhd-performance-hero-desktop.jpg') no-repeat center center/cover;
+  height: 100vh;
+  
+}
+#specs-container-2{
+  margin-top: 0;
 }
