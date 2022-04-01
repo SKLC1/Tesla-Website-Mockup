@@ -7,7 +7,7 @@
   font-family: Gotham;
   scroll-behavior: smooth;
 }
-
+/*   */
 body{
   height: 300vh;
 }
@@ -44,8 +44,37 @@ body{
   display: inline-block;
   margin: 14px;
   font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
 }
-
+.nav-item::before{
+  content: '';
+  position: absolute;
+  display: none;
+  background-color: grey;
+  height: 2rem;
+  width: 100%;
+  top: -10px;
+  left: -5px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  z-index: -1;
+}
+.nav-item:hover::before{
+  display:inline;
+  animation-name: nav;
+  animation: nav 0.3s ease-in;
+}
+/* nav animation */
+@keyframes nav{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 .logo-icon{
   width: 120px;
 
@@ -253,9 +282,8 @@ body{
 }
 #car-image{
   background: url('/model-3-hero-a-desktop.jpg') no-repeat center center/cover;
-  width: auto;
-  height: auto;
-  
+  width: 600px;
+  height: 600px;
 }
 /* aside */
 .aside-content{
