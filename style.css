@@ -115,6 +115,9 @@ body{
   animation-name: nav;
   animation: nav 0.3s ease-in;
 }
+/* animation test */
+
+
 /* nav animation */
 @keyframes nav{
   0%{
@@ -423,7 +426,7 @@ body{
 /* main media query */
 @media (max-width: 1450px) {
   #aside-grower{
-    height: 18rem;
+    height: 10rem;
   }
   .btn-item{
     color: #000;
