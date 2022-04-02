@@ -7,9 +7,14 @@
   font-family: Gotham;
   scroll-behavior: smooth;
 }
-/*   */
+/* hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
 body{
   height: 300vh;
+  /* overflow: hidden;  */
 }
 
 /* HEADER */
@@ -137,6 +142,22 @@ body{
   background-color: #fff;
   color: #000;
 }
+/* support chat */
+.support-chat{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #000;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  left: 96%;
+  top: 88%;
+  cursor: pointer;
+}
+
   /* scroll down button */
   .scroll-down-container{
     display: flex;
@@ -388,6 +409,20 @@ body{
     height: 2rem;
   }
 }
+@media (max-width: 1200px) {
+
+  .car-content{
+   margin: 0;
+   padding: 0;
+   height: 50%;
+  }
+ #car-image{
+   
+   width: 25rem;
+   height: 18rem;
+ }
+}
+
 @media (max-width: 600px) {
   .btn-item{
     color: #000;
@@ -395,6 +430,19 @@ body{
     padding: 10px 20px;
     margin: 0 10px;
    }
+}
+@media (max-width: 400px) {
+
+  .car-content{
+   margin: 0;
+   padding: 0;
+   height: 30%;
+  }
+ #car-image{
+   
+   width: 20rem;
+   height: 18rem;
+ }
 }
 /* footer */
 #divider{
@@ -469,5 +517,23 @@ body{
     flex-direction: column;
     margin: 0 20%;
   }
-  
+  .support-chat{
+    left:94%;
+  }
 }
+@media (max-width: 800px) {
+  .support-chat{
+    left:90%;
+  }
+}
+
+@media (max-width:500px) {
+  .title{
+    white-space: wrap;
+    font-size: 18px;
+  }
+  .support-chat{
+    left:85%;
+  }
+}
+
