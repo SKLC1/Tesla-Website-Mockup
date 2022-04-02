@@ -266,24 +266,26 @@ body{
   }
 }
 
-/* main (sec-2) */
+/* main page 2 */
 .main-container{
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: end;
+
 }
 /* car content */
 .car-content{
-  /* background-color: red; */
   height: 100vh;
   width: auto;
-  
+  margin-right: 300px;
 }
+
 #car-image{
   background: url('/model-3-hero-a-desktop.jpg') no-repeat center center/cover;
-  width: 600px;
-  height: 600px;
+  width: 800px;
+  height: 700px;
+  
+  
 }
 /* aside */
 .aside-content{
@@ -462,7 +464,7 @@ body{
 }
 /* footer media width */
 @media (max-width:1600px) {
-  .description-container{
+  .description-container {
     display: flex;
     flex-direction: column;
     margin: 0 20%;
