@@ -34,7 +34,51 @@ body{
   font-family: Gotham-Light ;
   src: url('/Gotham\ Thin.otf');
 }
+/* scroll bar */
+.scrollbar-container{
+  position: absolute;
+}
+.scrollbar-list{
+ position: fixed;
+ display: flex;
+ flex-direction: column;
+ top: 36vh;
+ left: 10px;
+ list-style: none;
+ padding: 0 5px;
+}
+.scrollbar-item{
+  background-color: rgba(204, 204, 204, 0.4);
+  height: 25px;
+  width: 1px;
+  margin: 2px;
+  cursor: pointer;
+  font-size: 0px;
+}
+.scrollbar-item::after{
+  content: '';
+  position: absolute;
+  
+}
+.scrollbar-item:hover::after{
+  content: '';
+  position: absolute;
+  font-size: 12px;
+  color: rgba(252, 252, 252, 0.9);
+  margin-left: 5px;
+  animation-name: appear;
+  animation: appear 0.2s linear;
+}
+/* scrollabr disapear media */
+@media (max-width:900px) {
+  .scrollbar-list{
+    display: none;
+  }
+}
+/* navbar */
 .nav-container{
+  position: sticky;
+  top: 0px;
   display: flex;
   flex-direction: row;
   align-items:center;
@@ -44,7 +88,7 @@ body{
   animation-name: appear;
   animation: appear 0.5s linear;
 }
-/* navbar */
+
 .nav-item{
   display: inline-block;
   margin: 14px;
@@ -61,9 +105,9 @@ body{
   height: 2rem;
   width: 100%;
   top: -10px;
-  left: -5px;
-  padding: 2px 10px;
-  border-radius: 20px;
+  left: -13px;
+  padding: 2px 15px;
+  border-radius: 10px;
   z-index: -1;
 }
 .nav-item:hover::before{
@@ -121,8 +165,10 @@ body{
   font-size: 30px;
   padding: 10px;
   margin: 0 30px;
+  
   animation-name: appear2;
   animation: appear 0.5s ease-out 1;
+  
 }
 .specs-item__sub{
   font-size: 12px;
@@ -137,6 +183,7 @@ body{
   padding: 10px 60px;
   transition-duration: 0.5s;
   white-space: nowrap;
+  cursor: pointer;
 }
 .order-now-button:hover{
   background-color: #fff;
@@ -198,10 +245,11 @@ body{
 }
 @keyframes appear2{
   0%{
-    transform: translateY(600px);
+    transform: translateY(-50px);
     opacity: 0;
   }
   100%{
+    transform: translateY(0px);
     opacity: 1;
     
   }
@@ -303,8 +351,8 @@ body{
 
 #car-image{
   background: url('/model-3-hero-a-desktop.jpg') no-repeat center center/cover;
-  width: 800px;
-  height: 700px;
+  width: 900px;
+  height: 800px;
   
   
 }
@@ -359,6 +407,7 @@ body{
   transition-duration: 0.5s;
   font-weight: bolder;
   font-size: 12px;
+  cursor: pointer;
 }
 .order-now-button__dark:hover{
   background-color: #000;
@@ -444,6 +493,12 @@ body{
    height: 18rem;
  }
 }
+@media (max-width: 300px) {
+ #car-image{
+   width: 16rem;
+   height: 12rem;
+ }
+}
 /* footer */
 #divider{
   height: 10px;
@@ -472,6 +527,8 @@ body{
   display: flex;
   flex-direction: row;
   margin: 0 20%;
+  animation-name: appear;
+  animation: appear 0.5s linear;
 }
 .buttons-container{
  display: flex;
@@ -510,7 +567,7 @@ body{
   padding: 2rem;
   word-spacing: 5px;
 }
-/* footer media width */
+/* page 3 media width */
 @media (max-width:1600px) {
   .description-container {
     display: flex;
@@ -534,6 +591,24 @@ body{
   }
   .support-chat{
     left:85%;
+  }
+}
+
+
+/* height media page 3  */
+@media (max-height: 650px) {
+  .specs-container-2{
+    margin-top: 35vh;
+  }
+}
+@media (max-height: 550px) {
+  .specs-container-2{
+    margin-top: 20vh;
+  }
+}
+@media (max-height: 350px) {
+  .specs-container-2{
+    top:200px;
   }
 }
 
