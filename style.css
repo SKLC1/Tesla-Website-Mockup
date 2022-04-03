@@ -55,12 +55,8 @@ body{
   cursor: pointer;
   font-size: 0px;
 }
-.scrollbar-item::after{
-  content: '';
-  position: absolute;
-  
-}
-.scrollbar-item:hover::after{
+
+.scrollbar-item:hover:{
   content: '';
   position: absolute;
   font-size: 12px;
@@ -148,7 +144,10 @@ body{
 }
 
 /* specs bar */
-
+svg{
+  color: #fff;
+  fill: lightgrey;
+}
 .specs-container{
   margin-top: 55vh;
   
@@ -669,6 +668,21 @@ body{
 
 
 /* height media page 3  */
+@media (max-height: 900px) {
+  #divider{
+    margin-top: 100px;
+  }
+}
+@media (max-height: 800px) {
+  #divider{
+    margin-top: 200px;
+  }
+}
+@media (max-height: 600px) {
+  #divider{
+    margin-top: 300px;
+  }
+}
 @media (max-height: 650px) {
   .specs-container-2{
     margin-top: 35vh;
