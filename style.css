@@ -668,12 +668,15 @@ svg{
 
 
 /* height media page 3  */
-/* @media (max-height: 900px) {
+@media (max-height: 900px) {
   #divider{
     margin-top: 100px;
-  } */
-/* }
-@media (max-height: 800px) {
+  }
+  .car-content{
+    margin-bottom: 50px;
+  }
+}
+/* @media (max-height: 800px) {
   #divider{
     margin-top: 200px;
   }
